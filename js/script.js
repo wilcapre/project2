@@ -52,7 +52,7 @@ function showPage(page, list) {
    };
 
 
-   showPage(1, listItem);
+  showPage(1, listItem);
 
    /***
     we will create an appendPageLinks function to  generate, append, 
@@ -71,20 +71,23 @@ function showPage(page, list) {
       pageDiv.appendChild(paginationDiv);
       pageUl.appendChild(paginationUl);
 
-      const pageUl = document.createElement('ul');
+      const pageUl = document.createElement("ul");
       pageDiv.appendChild(pageUl);
 
 
       for (var i = 0; i < a.length; i++) {
       
-         if (listDiv.style.display == 'none') {
+         if (listDiv.style.display == "none") {
          
          
          } else {
-            listDiv.style.display = 'block'; 
-            addItemPage.addEventListener ('click');
-               listLi = document.createElement ('li');
+            listDiv.style.display = "block"; 
+            addItemPage.addEventListener ("click");
+               listLi = document.createElement ("li");
                liTextContext = addItemInput.value;
+               for (var i = 0; i < a.length; i++) {
+
+               appendPageLinks[i].addClassList.remove("active")
             
             }
             
@@ -92,15 +95,18 @@ function showPage(page, list) {
             for (var i = 0; i < PerPage; i++) {
                const li = document.getElement("li");
                const a = document.getElement("a");
-               a.href = '#';
-               li.appendChild(document.createElement ("a"+student));
-               ul.appendChild(li);   
+               a.textContext = i;
+               li.appendChild= document.createElement ("a");
+               ul.appendChild(li); 
+               
+               
             
              }
             }
       }
          };
 
+   
    appendPageLinks(listItem);
 /** 
       <div class="pagination">
