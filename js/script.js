@@ -64,14 +64,44 @@ function showPage(page, list) {
       console.log("function is running")
       var paginationDiv = document.createElement("div");
       var paginationUl = document.createElement("ul");
-      
-      console.log(pageDiv)
-      pageDiv.appendChild(paginationDiv)
-  
-    
-   };
+     
 
-   appendPageLinks(listItem)
+
+      console.log(pageDiv)
+      pageDiv.appendChild(paginationDiv);
+      pageUl.appendChild(paginationUl);
+
+      const pageUl = document.createElement('ul');
+      pageDiv.appendChild(pageUl);
+
+
+      for (var i = 0; i < a.length; i++) {
+      
+         if (listDiv.style.display == 'none') {
+         
+         
+         } else {
+            listDiv.style.display = 'block'; 
+            addItemPage.addEventListener ('click');
+               listLi = document.createElement ('li');
+               liTextContext = addItemInput.value;
+            
+            }
+            
+            function totalPageNum() {
+            for (var i = 0; i < PerPage; i++) {
+               const li = document.getElement("li");
+               const a = document.getElement("a");
+               a.href = '#';
+               li.appendChild(document.createElement ("a"+student));
+               ul.appendChild(li);   
+            
+             }
+            }
+      }
+         };
+
+   appendPageLinks(listItem);
 /** 
       <div class="pagination">
         <ul>
