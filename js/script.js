@@ -33,7 +33,7 @@ p.textContext = Input.value + ';';
 ***/
 
 function showPage(page, list) {
-   console.log("function is running")
+   console.log("function is running");
 
   var startIndex = (page * perPage) - perPage;
   var endIndex = page * perPage;
@@ -61,7 +61,7 @@ function showPage(page, list) {
 
    function appendPageLinks (list) {
       totalPageNum = Math.ceil(list.length / 10);
-      console.log("function is running")
+      console.log("function is running");
       var paginationDiv = document.createElement("div");
       var paginationUl = document.createElement("ul");
      
@@ -77,21 +77,22 @@ function showPage(page, list) {
 
       for (var i = 0; i < a.length; i++) {
       
-         if (listDiv.style.display == "none") {
+         if (pageDiv.style.display == "none") {
          
          
          } else {
-            listDiv.style.display = "block"; 
+            pageDiv.style.display = "block"; 
             addItemPage.addEventListener ("click");
                listLi = document.createElement ("li");
                liTextContext = addItemInput.value;
-               for (var i = 0; i < a.length; i++) {
 
-               appendPageLinks[i].addClassList.remove("active")
+               for (var i = 0; i < a.length; i++) {
+               appendPageLinks[i].addClassList.remove("active");
             
             }
             
             function totalPageNum() {
+               return Math.ceil(list.length / totalPageNumber);
             for (var i = 0; i < PerPage; i++) {
                const li = document.getElement("li");
                const a = document.getElement("a");
@@ -100,35 +101,15 @@ function showPage(page, list) {
                ul.appendChild(li); 
                
                
-            
-             }
             }
-      }
+            }
+            }
+           }
          };
 
    
    appendPageLinks(listItem);
-/** 
-      <div class="pagination">
-        <ul>
-          <li>
-            <a class="active" href="#">1</a>
-          </li>
-           <li>
-            <a href="#">2</a>
-          </li>
-           <li>
-            <a href="#">3</a>
-          </li>
-           <li>
-            <a href="#">4</a>
-          </li>
-           <li>
-            <a href="#">5</a>
-          </li>
-        </ul>
-      </div>
-      **/
+
 
 /**
 
