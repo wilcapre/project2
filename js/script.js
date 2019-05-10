@@ -17,6 +17,7 @@ const listItem = document.querySelectorAll(".student-item");
 const perPage = 10;
 var pageDiv = document.querySelector("page");
 
+
 console.log (listItem);
 
 /***
@@ -52,64 +53,85 @@ function showPage(page, list) {
    };
 
 
-  showPage(1, listItem);
+  //showPage(1, listItem);
 
    /***
     we will create an appendPageLinks function to  generate, append, 
     and add the pagination buttons.
    ***/
+  
 
    function appendPageLinks (list) {
       totalPageNum = Math.ceil(list.length / 10);
       console.log("function is running");
+
       var paginationDiv = document.createElement("div");
-      var paginationUl = document.createElement("ul");
-     
-
-
-      console.log(pageDiv)
       pageDiv.appendChild(paginationDiv);
+      var paginationUl = document.createElement("ul");
       pageUl.appendChild(paginationUl);
+     
+      var a = className;
+      var active = paginationLinks;
 
-      const pageUl = document.createElement("ul");
-      pageDiv.appendChild(pageUl);
 
+      console.log("pageDiv");
 
-      for (var i = 0; i < a.length; i++) {
+      for (var i = 0; i < totalPageNum ; i++) {
+        var totalPageNum = document.createElement("div");
+        totalPageNum.innerHTML = `<a href="#">${i+1}</a>`;
+        const a = document.gquerySelectorAll("a");
+        a[0].className = "active";
+        a[i].addEventListener ("click", (event) => {
+         showPage(list, i+1);
+         appendPageLinks[i].addClassList.remove("active");
+        });
+      }
+
+         console.log("totalPageNum");
       
-         if (pageDiv.style.display == "none") {
+      const activeClassName = {
+         add: (eventListener) => event.activeClassName = "active",
+         remove: (page) => {
          
-         
-         } else {
-            pageDiv.style.display = "block"; 
-            addItemPage.addEventListener ("click");
-               listLi = document.createElement ("li");
-               liTextContext = addItemInput.value;
+      for (var i = 0; i < a.length; i++) {
+         let active = document.querySelectorAll("paginationLinks");
+         active[i].activeClassName='';
 
-               for (var i = 0; i < a.length; i++) {
-               appendPageLinks[i].addClassList.remove("active");
-            
-            }
-            
-            function totalPageNum() {
-               return Math.ceil(list.length / totalPageNumber);
-            for (var i = 0; i < PerPage; i++) {
-               const li = document.getElement("li");
-               const a = document.getElement("a");
-               a.textContext = i;
-               li.appendChild= document.createElement ("a");
-               ul.appendChild(li); 
+      
+         //if (pageDiv.style.display == "none") {
+         
+         
+         //} else {
+           // pageDiv.style.display = "block"; 
+           // addItemPage.addEventListener ("click");
+             //  listLi = document.createElement ("li");
+               //liTextContext = addItemInput.value;
+
+              // for (var i = 0; i < a.length; i++) {
                
-               
-            }
-            }
+            
+            //}
+            
+           // function totalPageNum() {
+             //  return Math.ceil(list.length / totalPageNumber);
+            //for (var i = 0; i < PerPage; i++) {
+              // const li = document.getElement("li");
+               //const a = document.getElement("a");
+               //a.textContext = i;
+               //li.appendChild= document.createElement ("a");
+               //ul.appendChild(li); 
+
+               //console.log(totalPageNum);
+            
             }
            }
+          }
+         
          };
-
-   
-   appendPageLinks(listItem);
-
+         showPage(1, listItem)
+         appendPageLinks(list)
+         
+      
 
 /**
 
