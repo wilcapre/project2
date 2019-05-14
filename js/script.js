@@ -15,7 +15,7 @@ FSJS project 2 - List Filter and Pagination
 
 const listItem = document.querySelectorAll(".student-item");
 const perPage = 10;
-var pageDiv = document.querySelector("page");
+var pageDiv = document.querySelector(".page");
 
 
 console.log (listItem);
@@ -68,34 +68,47 @@ function showPage(page, list) {
       var paginationDiv = document.createElement("div");
       pageDiv.appendChild(paginationDiv);
       var paginationUl = document.createElement("ul");
-      pageUl.appendChild(paginationUl);
+      paginationDiv.appendChild(paginationUl);
      
-      var a = className;
-      var active = paginationLinks;
 
 
       console.log("pageDiv");
 
-      for (var i = 0; i < totalPageNum ; i++) {
-        var totalPageNum = document.createElement("div");
-        totalPageNum.innerHTML = `<a href="#">${i+1}</a>`;
-        const a = document.gquerySelectorAll("a");
-        a[0].className = "active";
-        a[i].addEventListener ("click", (event) => {
-         showPage(list, i+1);
-         appendPageLinks[i].addClassList.remove("active");
-        });
-      }
+      //for (var i = 0; i < totalPageNum ; i++) {
 
+        var totalPageNum = document.createElement("a");
+        const li = document.createElement("li");
+        totalPageNum.href = "http: //google.com";
+        totalPageNum.innerText = "Go to google";
+        li.appendChild (totalPageNum);
+        paginationUl.appendChild(li);
+
+        
+         //console.log(a);
+
+        var totalPage = document.querySelectorAll("paginationLinks"); //"active";
+        totalPage[0].listItem.add("active");
+        for (let i=0; i < totalPages; i++) { 
+        totalPage[i].addEventListener ("click", (event) => {
+         let showPage = event.target.textContext;
+
+
+         for (let i=0; i< totalPage.length; i++) {
+         appendPageLinks[i].addClassList.remove("active");
+        }
+        event.target.classList.add("active");
+      });
+      }
+     
          console.log("totalPageNum");
       
       const activeClassName = {
          add: (eventListener) => event.activeClassName = "active",
          remove: (page) => {
          
-      for (var i = 0; i < a.length; i++) {
-         let active = document.querySelectorAll("paginationLinks");
-         active[i].activeClassName='';
+      //for (var i = 0; i < a.length; i++) {
+        // let active = document.querySelectorAll("paginationLinks");
+         //active[i].activeClassName='';
 
       
          //if (pageDiv.style.display == "none") {
@@ -112,24 +125,24 @@ function showPage(page, list) {
             
             //}
             
-           // function totalPageNum() {
+          //  function totalPageNum() {
              //  return Math.ceil(list.length / totalPageNumber);
             //for (var i = 0; i < PerPage; i++) {
-              // const li = document.getElement("li");
+              //const li = document.getElement("li");
                //const a = document.getElement("a");
-               //a.textContext = i;
+              // a.textContext = i;
                //li.appendChild= document.createElement ("a");
-               //ul.appendChild(li); 
+              // ul.appendChild(li); 
 
                //console.log(totalPageNum);
             
             }
            }
-          }
+         
          
          };
          showPage(1, listItem)
-         appendPageLinks(list)
+         appendPageLinks(listItem)
          
       
 
