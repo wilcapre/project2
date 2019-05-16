@@ -89,7 +89,7 @@ function showPage(page, list) {
         //var totalPage = document.querySelectorAll("paginationLinks"); //"active";
        // console.log(totalPage);
        if ( i === 0 ){
-        pagination.classList = ("active");
+        totalPageNum.classList.add = ("active");
        }
         /***
          add the event listener into the pagination links
