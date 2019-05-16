@@ -52,7 +52,6 @@ function showPage(page, list) {
      }
    };
 
-
   //showPage(1, listItem);
 
    /***
@@ -69,34 +68,35 @@ function showPage(page, list) {
       pageDiv.appendChild(paginationDiv);
       var paginationUl = document.createElement("ul");
       paginationDiv.appendChild(paginationUl);
+      
      
-
-
       console.log("pageDiv");
 
       //for (var i = 0; i < totalPageNum ; i++) {
 
+/*** This area will add the li, ul and href to the page
+ ***/
         var totalPageNum = document.createElement("a");
         const li = document.createElement("li");
         totalPageNum.href = "http: //google.com";
         totalPageNum.innerText = "Go to google";
         li.appendChild (totalPageNum);
         paginationUl.appendChild(li);
-
+        var paginationDiv = document.createElement("className");
         
          //console.log(a);
 
         var totalPage = document.querySelectorAll("paginationLinks"); //"active";
-        totalPage[0].listItem.add("active");
+        totalPage[pageDiv].className.add("active");
         for (let i=0; i < totalPages; i++) { 
-        totalPage[i].addEventListener ("click", (event) => {
-         let showPage = event.target.textContext;
-
+        totalPageNum.addEventListener ("click", (event) => {
+         //totalPageNum.className = event.target.textContext;
+         event.target.classList.add("active");
 
          for (let i=0; i< totalPage.length; i++) {
          appendPageLinks[i].addClassList.remove("active");
         }
-        event.target.classList.add("active");
+       // event.target.classList.add("active");
       });
       }
      
@@ -141,8 +141,8 @@ function showPage(page, list) {
          
          
          };
-         showPage(1, listItem)
-         appendPageLinks(listItem)
+         showPage(1, listItem);
+         appendPageLinks(listItem);
          
       
 
