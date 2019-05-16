@@ -68,35 +68,45 @@ function showPage(page, list) {
       pageDiv.appendChild(paginationDiv);
       var paginationUl = document.createElement("ul");
       paginationDiv.appendChild(paginationUl);
-      
+      var paginationDiv = document.createElement("className");
+      paginationDiv.className = "pagination";
      
       console.log("pageDiv");
 
-      //for (var i = 0; i < totalPageNum ; i++) {
 
 /*** This area will add the li, ul and href to the page
  ***/
+      for (var i = 0; i < totalPageNum ; i++) {
         var totalPageNum = document.createElement("a");
         const li = document.createElement("li");
         totalPageNum.href = "http: //google.com";
         totalPageNum.innerText = "Go to google";
         li.appendChild (totalPageNum);
         paginationUl.appendChild(li);
-        var paginationDiv = document.createElement("className");
-        
+
          //console.log(a);
 
-        var totalPage = document.querySelectorAll("paginationLinks"); //"active";
-        totalPage[pageDiv].className.add("active");
-        for (let i=0; i < totalPages; i++) { 
+        //var totalPage = document.querySelectorAll("paginationLinks"); //"active";
+       // console.log(totalPage);
+       if ( i === 0 ){
+        pagination.classList = ("active");
+       }
+        /***
+         add the event listener into the pagination links
+         ***/
         totalPageNum.addEventListener ("click", (event) => {
-         //totalPageNum.className = event.target.textContext;
-         event.target.classList.add("active");
+         if (event.target.className = "A" );
+         var totalPage = document.querySelectorAll("paginationLinks");
 
-         for (let i=0; i< totalPage.length; i++) {
-         appendPageLinks[i].addClassList.remove("active");
+         //for (let i=0; i < totalPage; i++) { 
+         //totalPageNum.className = event.target.textContext;
+         //event.target.classList.add("active");
+
+         for (let i = 0; i < totalPage.length; i += 1) {
+         appendPageLinks[i].classList.remove("active");
+         //event.target.classList.add("active");
         }
-       // event.target.classList.add("active");
+      
       });
       }
      
@@ -135,12 +145,10 @@ function showPage(page, list) {
               // ul.appendChild(li); 
 
                //console.log(totalPageNum);
-            
             }
            }
-         
-         
          };
+
          showPage(1, listItem);
          appendPageLinks(listItem);
          
