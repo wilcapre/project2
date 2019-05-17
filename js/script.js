@@ -62,39 +62,40 @@ function showPage(page, list) {
 
    function appendPageLinks (list) {
       totalPageNum = Math.ceil(list.length / 10);
-      console.log("function is running");
+      //console.log(totalPage);
 
       var paginationDiv = document.createElement("div");
       pageDiv.appendChild(paginationDiv);
       var paginationUl = document.createElement("ul");
       paginationDiv.appendChild(paginationUl);
-      var paginationDiv = document.createElement("className");
+
       paginationDiv.className = "pagination";
      
-      console.log("pageDiv");
+      console.log(pageDiv);
 
 
-/*** This area will add the li, ul and href to the page
+/*** This area will create li and a element, also adding href 
+ to the page and start.
  ***/
       for (var i = 0; i < totalPageNum ; i++) {
-        var totalPageNum = document.createElement("a");
-        const li = document.createElement("li");
-        totalPageNum.href = "http: //google.com";
-        totalPageNum.innerText = "Go to google";
-        li.appendChild (totalPageNum);
-        paginationUl.appendChild(li);
+        const a = document.createElement("a"); 
+        const li = document.createElement("li"); 
+        a.href = "#"; 
+        a.textContent = i + 1;  
+        li.appendChild = document.createElement ("a");
+        paginationUl.appendChild(li); 
 
          //console.log(a);
 
         //var totalPage = document.querySelectorAll("paginationLinks"); //"active";
        // console.log(totalPage);
        if ( i === 0 ){
-        totalPageNum.classList.add = ("active");
+        a.classList.add = ("active");
        }
         /***
          add the event listener into the pagination links
          ***/
-        totalPageNum.addEventListener ("click", (event) => {
+        totalPage.addEventListener ("click", (event) => {
          if (event.target.className = "A" );
          var totalPage = document.querySelectorAll("paginationLinks");
 
@@ -134,6 +135,7 @@ function showPage(page, list) {
                
             
             //}
+
             
           //  function totalPageNum() {
              //  return Math.ceil(list.length / totalPageNumber);
