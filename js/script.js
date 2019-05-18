@@ -98,20 +98,23 @@ function showPage(page, list) {
          add the event listener into the pagination links
          ***/
         totalPage[i].addEventListener("click", (event) => {
-         let totalPage = event.target.interText;
-         showPage(1,listItem);
+         let PageNum = event.target.interText;
+
+         showPage(i,listItem);
+
+         if (event.target.className= "A");
 
         var totalPage = document.querySelectorAll("paginationLinks");
 
-         //for (let i=0; i < totalPage; i++) { 
-         //totalPageNum.className = event.target.textContext;
-         //event.target.classList.add("active");
+         for (let i=0; i < totalPage; i++) { 
+         totalPageNum.className = event.target.textContext;
+         event.target.classList.add("active");
 
          for (let i = 0; i < totalPage.length; i += 1) {
          appendPageLinks[i].classList.remove("active");
          //event.target.classList.add("active");
         }
-      
+         }
       });
       }
      
