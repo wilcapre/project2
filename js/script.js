@@ -98,7 +98,7 @@ function showPage(page, list) {
          add the event listener into the pagination links
          ***/
         totalPage[i].addEventListener("click", (event) => {
-         let PageNum = event.target.interText;
+         let totalPageNum = event.target.innerText;
 
          showPage(i,listItem);
 
