@@ -75,7 +75,7 @@ function showPage(page, list) {
 
 
 /*** This area will create li and a element, also adding href 
- to the page and start.
+ to the page and start with the fisrt page.
  ***/
       for (var i = 0; i < totalPageNum ; i++) {
         const a = document.createElement("a"); 
@@ -89,15 +89,19 @@ function showPage(page, list) {
 
         //var totalPage = document.querySelectorAll("paginationLinks"); //"active";
        // console.log(totalPage);
+         var totalPage = document.getElementsByTagName("a");
+
        if ( i === 0 ){
         a.classList.add = ("active");
        }
         /***
          add the event listener into the pagination links
          ***/
-        totalPage.addEventListener ("click", (event) => {
-         if (event.target.className = "A" );
-         var totalPage = document.querySelectorAll("paginationLinks");
+        totalPage[i].addEventListener("click", (event) => {
+         let totalPage = event.target.interText;
+         showPage(1,listItem);
+
+        var totalPage = document.querySelectorAll("paginationLinks");
 
          //for (let i=0; i < totalPage; i++) { 
          //totalPageNum.className = event.target.textContext;
@@ -147,11 +151,11 @@ function showPage(page, list) {
               // ul.appendChild(li); 
 
                //console.log(totalPageNum);
-            }
-           }
-         };
+           } 
+         }       
+      };
 
-         showPage(1, listItem);
+         
          appendPageLinks(listItem);
          
       
@@ -227,38 +231,7 @@ function showPage ( list, page = 1 ) {
 
 } else {
    list[i].style.display = 'none'; 
-}
-  };
 
-  function firstPage() {
-   page = 1;
-   list();
-}
-
-function secondPage() {
-   page += 1;
-   list();
-}
-
-function thirdPage() {
-   page += 1;
-   list();
-}
-
-function fourthPage() {
-   page += 1;
-   list();
-}
-
-function sixPage() {
-   page = numberOfPages;
-   list();
-}
-***/
-
-/*** 
-   Create the `appendPageLinks function` to generate, append, and add 
-   functionality to the pagination buttons.
 ***/
 
 /***
@@ -270,21 +243,15 @@ const div = document.getElement("div");
 
 const ul = document.querrySelector('ul');
 
-
 if (listDiv.style.display == 'none') {
-
 
 } else {
    listDiv.style.display = 'block'; 
   }
 
-
-
 addItemClass.addEventListener ('click') () {
    list li = document.createElement (li);
    li textContext = addItemInput.value
-
-
 }
 
 for (let i = 0; i < PerPage; i++) {
@@ -292,9 +259,6 @@ for (let i = 0; i < PerPage; i++) {
    const a = document.getElement("a");
    li.appendChild(a);
    ul.appendChild(li)
-   
-
-
 
  }
 }
