@@ -92,7 +92,7 @@ function showPage(page, list) {
          var totalPage = document.getElementsByTagName("a");
 
        if ( i === 0 ){
-        a.classList.add = ("active");
+        pagination.classList = ("active");
        }
         /***
          add the event listener into the pagination links
@@ -110,7 +110,7 @@ function showPage(page, list) {
          totalPageNum.className = event.target.textContext;
          event.target.classList.add("active");
 
-         for (let i = 0; i < totalPage.length; i += 1) {
+         for (let i = 0; i < totalPage.length; i += 1) {ß
          appendPageLinks[i].classList.remove("active");
          //event.target.classList.add("active");
         }
