@@ -97,7 +97,7 @@ function appendPageLinks(list) {
 
       if ((event.target.className = "A"));
 
-      var totalPage = document.querySelectorAll("paginationLinks");
+      var totalPage = document.querySelectorAll("a");
       
 
       //The active class name should be removed from all pagination links
