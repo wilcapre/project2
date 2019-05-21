@@ -98,18 +98,20 @@ function appendPageLinks(list) {
       if ((event.target.className = "A"));
 
       var totalPage = document.querySelectorAll("paginationLinks");
+      
 
       //The active class name should be removed from all pagination links
 
       for (let i = 0; i < totalPage.length; i += 1) {
-        appendPageLinks[i].classList.remove("active");
+        totalPage[i].classList.remove("active");
       }
 
       //The active class name should be added to the link that was just clicked.
       //for (let i = 0; i < totalPage; i++) {
-      totalPageNum.className = event.target.textContext;
+      a.className = event.target.textContext;
       event.target.classList.add("active");
       //}
+
     });
   }
 
@@ -141,6 +143,7 @@ function appendPageLinks(list) {
   //}
 }
 //}
+
 
 appendPageLinks(listItem);
 
@@ -188,39 +191,7 @@ The function to show a page should be called, passing in as arguments, the globa
 
    */
 
-/*** 
-   Pro Tips: 
-     - Keep in mind that with a list of 54 students, the last page 
-       will only display four.
-     - Remember that the first student has an index of 0.
-     - Remember that a function `parameter` goes in the parens when 
-       you initially define the function, and it acts as a variable 
-       or a placeholder to represent the actual function `argument` 
-       that will be passed into the parens later when you call or 
-       "invoke" the function 
-***/
 
-/***
-function showPage ( list, page = 1 ) {
-   const showPage = 10;
-   const list = hide ();
-   const startINdex = (page) => page ===1 ? 0 : ( page - 1 ) * showPage;
-   const first = startINdex (page);
-   const last = page * showPage;
-   list.next (first,end).each(function(i,li) {
-      li = showIn (54);
-   }
-}; 
-   for (let i=0; i < list.length; 1++){
-      Inside the loop, display any list item with an index that is greater than or equal to the start index variable and less than the end index variable.
-
-   if ( i >= page * 10 && i <= ((page * 10) + (9))) {
-      list[i].style.display = ' ';
-
-} else {
-   list[i].style.display = 'none'; 
-
-***/
 
 /***
 function appendPageLinks () {
@@ -252,11 +223,3 @@ for (let i = 0; i < PerPage; i++) {
 }
 ***/
 
-/***
-const addActiveClass = document.querrySelector('class.addActiveClass');
-
-const removeActiveClass = document.querrySelector('class.removeActiveClass');
-
-
-appendPageList (list);
-***/
